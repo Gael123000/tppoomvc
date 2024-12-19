@@ -30,4 +30,7 @@ $router->add('/delete', function () {
     (new TaskController)->delete($id);
 });
 $router->dispatch();
+?>
+
+<link href="/style.css" rel="stylesheet" />
 
