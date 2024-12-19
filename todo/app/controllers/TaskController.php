@@ -9,9 +9,16 @@ class TaskController
     public function create()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            Task::create($_POST['title']);
-            header('Location: /');
-            exit;
+            $title = $_POST['title'] ?? '';
+            $description = $_POST['description'] ?? '';
+
+            if (!empty($title) && !empty($description)) {
+                Task::create($title, $description);
+                header('Location: /');
+                exit;
+            } else {
+                $error = 'Title and description are required.';
+            }
         }
         include __DIR__ . '/../views/tasks/create.php';
     }
