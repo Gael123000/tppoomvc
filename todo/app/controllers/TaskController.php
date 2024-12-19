@@ -17,7 +17,7 @@ class TaskController
                 header('Location: /');
                 exit;
             } else {
-                $error = 'Title and description are required.';
+                $error = 'Titre et description obligatoires';
             }
         }
         include __DIR__ . '/../views/tasks/create.php';

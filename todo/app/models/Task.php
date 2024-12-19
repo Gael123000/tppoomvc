@@ -22,18 +22,6 @@ class Task
 
     }
 
-//    public static function createDescription($description)
-//    {
-//        $db = Database::getInstance()->getPdo();
-//        $stmt = $db->prepare("INSERT INTO tasks (title, created_at) VALUES (:title, NOW())");
-//        $stmt->execute([
-//            ':title' => $description,
-//        ]);
-//
-//        return $db->lastInsertId();
-//
-//    }
-
     public static function markAsCompleted($id)
     {
         $db = Database::getInstance()->getPdo();

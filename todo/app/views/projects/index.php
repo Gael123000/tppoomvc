@@ -1,5 +1,5 @@
 <head>
-    <title>Gestion des tâches</title>
+    <title>Projet : <?= htmlspecialchars($project['name']) ?></title>
     <link href="style.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/55ca7da4ba.js" crossorigin="anonymous"></script>
 <!--    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">-->
