@@ -4,7 +4,7 @@ class ProjectController{
 
     public function index(){
         $projects = Project::all();
-        include ("../views/projects/index.php");
+        include __DIR__ . "/../views/projects/index.php";
     }
 
 }

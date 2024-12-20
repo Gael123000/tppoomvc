@@ -18,34 +18,29 @@
                 <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Titre</th>
+                    <th>Nom</th>
                     <th>Description</th>
-                    <th>Statut</th>
-                    <th>Action</th>
+<!--                    <th>Action</th>-->
                 </tr>
                 </thead>
                 <tbody>
-                <?php foreach ($tasks as $task): ?>
+                <?php foreach ($projects as $project): ?>
                     <tr>
-                        <td><?= $task['id'] ?></td>
-                        <td><?= $task['title'] ?></td>
-                        <td><?= $task['description'] ?></td>
-                        <td><?= $task['is_completed']
-                                ? '<span class="bg-success text-white text-nowrap rounded-2 p-1 mt-4">Terminée</span>'
-                                : '<span class="bg-warning text-white text-nowrap rounded-2 p-1 mt-4">En cours</span>'
-                            ?></td>
-                        <td>
-                            <?php if (!$task['is_completed']): ?>
-                                <form method="POST" action="/complete">
-                                    <input type="hidden" name="id" value="<?=$task['id']?>">
-                                    <button type="submit" class="btn btn-success">Terminée <i class="fa-solid fa-check"></i></button>
-                                </form>
-                            <?php endif; ?>
-                            <form method="POST" action="/delete">
-                                <input type="hidden" name="id" value="<?=$task['id']?>">
-                                <button type="submit" class="btn btn-danger"><i class="fa-regular fa-trash-can"></i></button>
-                            </form>
-                        </td>
+                        <td><?= $project['id'] ?></td>
+                        <td><?= $project['name'] ?></td>
+                        <td><?= $project['description'] ?></td>
+<!--                        <td>-->
+<!--                            --><?php //if (!$project['is_completed']): ?>
+<!--                                <form method="POST" action="/complete">-->
+<!--                                    <input type="hidden" name="id" value="--><?php //=$project['id']?><!--">-->
+<!--                                    <button type="submit" class="btn btn-success">Terminée <i class="fa-solid fa-check"></i></button>-->
+<!--                                </form>-->
+<!--                            --><?php //endif; ?>
+<!--                            <form method="POST" action="/delete">-->
+<!--                                <input type="hidden" name="id" value="--><?php //=$project['id']?><!--">-->
+<!--                                <button type="submit" class="btn btn-danger"><i class="fa-regular fa-trash-can"></i></button>-->
+<!--                            </form>-->
+<!--                        </td>-->
                     </tr>
                 <?php endforeach; ?>
                 </tbody>
