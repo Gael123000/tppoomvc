@@ -14,7 +14,7 @@ class TaskController
 
             if (!empty($title) && !empty($description)) {
                 Task::create($title, $description);
-                header('Location: /');
+                header('Location: /task');
                 exit;
             } else {
                 $error = 'Titre et description obligatoires';
@@ -25,13 +25,13 @@ class TaskController
     public function markAsCompleted($id)
     {
      Task::markAsCompleted($id);
-     header('Location: /');
+     header('Location: /task');
      exit;
      }
     public function delete($id)
     {
         Task::delete($id);
-        header('Location: /');
+        header('Location: /task');
         exit;
     }
 }

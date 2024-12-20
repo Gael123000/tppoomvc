@@ -17,7 +17,7 @@ class ProjectController{
 
             if (!empty($name) && !empty($description)){
                 Project::create($name, $description);
-                header("Location: /project");
+                header("Location: /");
             } else {
                 $error = 'Titre et description obligatoires';
             }

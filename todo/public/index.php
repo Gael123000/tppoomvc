@@ -7,7 +7,7 @@ require_once __DIR__ . '/../app/controllers/TaskController.php';
 require_once __DIR__ . '/../app/controllers/ProjectController.php';
 
 $router = new Router();
-$router->add('/', [new TaskController, 'index']);
+$router->add('/task', [new TaskController, 'index']);
 $router->add('/create', [new TaskController, 'create']);
 $router->add('/complete', function () {
     $id = $_POST['id'] ?? null;
@@ -17,7 +17,7 @@ $router->add('/delete', function () {
     $id = $_POST['id'] ?? null;
     (new TaskController)->delete($id);
 });
-$router->add('/project', [new ProjectController, 'index']);
+$router->add('/', [new ProjectController, 'index']);
 $router->add('/createProject', [new ProjectController, 'create']);
 
 $router->dispatch();

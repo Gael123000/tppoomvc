@@ -12,6 +12,7 @@
     <div class="d-flex justify-content-center position-fixed bg-white top-50 start-50 translate-middle flex-column rounded-5 shadow-lg" style="width: 900px; height: 500px; background-color: rgba(237,238,239,0.51);">
         <div class="m-3">
             <a href="/createProject" class="btn btn-primary">Créer un projet <i class="fa-solid fa-pen-to-square"></i></a>
+            <a href="/task" class="btn btn-primary">Voir les tâches</a>
         </div>
         <div class=" m-4 h-100 overflow-auto">
             <table class="table">
