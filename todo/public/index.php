@@ -18,7 +18,7 @@ $router->add('/delete', function () {
     (new TaskController)->delete($id);
 });
 $router->add('/project', [new ProjectController, 'index']);
-//$router->add('/create', [new ProjectController, 'create']);
+$router->add('/createProject', [new ProjectController, 'create']);
 
 $router->dispatch();
 ?>

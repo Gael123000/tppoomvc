@@ -1,5 +1,5 @@
 <head>
-    <title>Projet : <?= htmlspecialchars($project['name']) ?></title>
+    <title>Projet</title>
     <link href="style.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/55ca7da4ba.js" crossorigin="anonymous"></script>
 <!--    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">-->
@@ -7,11 +7,11 @@
 </head>
 <body class="">
     <div class="d-flex justify-content-center" id="bghead">
-        <h1 class="">Liste des tâches</h1>
+        <h1 class="">Liste des projets</h1>
     </div>
     <div class="d-flex justify-content-center position-fixed bg-white top-50 start-50 translate-middle flex-column rounded-5 shadow-lg" style="width: 900px; height: 500px; background-color: rgba(237,238,239,0.51);">
         <div class="m-3">
-            <a href="/create" class="btn btn-primary">Ajouter une tâche <i class="fa-solid fa-pen-to-square"></i></a>
+            <a href="/createProject" class="btn btn-primary">Ajouter une tâche <i class="fa-solid fa-pen-to-square"></i></a>
         </div>
         <div class=" m-4 h-100 overflow-auto">
             <table class="table">
