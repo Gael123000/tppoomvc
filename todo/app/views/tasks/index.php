@@ -38,7 +38,7 @@
                             <?php if (!$task['is_completed']): ?>
                                 <form method="POST" action="/complete">
                                     <input type="hidden" name="id" value="<?=$task['id']?>">
-                                    <button type="submit" class="btn btn-success">Terminée <i class="fa-solid fa-check"></i></button>
+                                    <button type="submit" class="btn btn-success text-nowrap">Terminée <i class="fa-solid fa-check"></i></button>
                                 </form>
                             <?php endif; ?>
                             <form method="POST" action="/delete">
